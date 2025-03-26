@@ -19,11 +19,11 @@ function CelsiusToFahrenheit(degree)
 }
 document.getElementById("cValue").onchange = function()
 {
-let cDegree = document.getElementById("cValue").value;
-document.getElementById("fValue").value = CelsiusToFahrenheit(cDegree);
+      let cDegree = document.getElementById("cValue").value;
+      document.getElementById("fValue").value = CelsiusToFahrenheit(cDegree);
 }
 document.getElementById("fValue").onchange = function()
 {
-let fDegree = document.getElementById("fValue").value;
-document.getElementById("fValue").value = faranheitToCelsius(fDegree);
+      let fDegree = document.getElementById("fValue").value;
+      document.getElementById("cValue").value = fahrenheitToCelsius(fDegree);
 }
