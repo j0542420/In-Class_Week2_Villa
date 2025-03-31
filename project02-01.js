@@ -8,14 +8,31 @@
 
       Filename: project02-01.js
  */
-
+"use strict";
+window.onerror = function()
+{
+      window.alert("error happened when converting C to F");
+}
 function FahrenheitToCelsius(degree)
 {
-      return (degree-32)/1.8;
+      let c = 0
+      console.log(degree);
+      try{
+            if(degree==0)throw "Divided by zero"; //trigger exception
+            c= 100/degree
+      }catch(err) //handle the exception
+      {
+            console.log("Run time exception " + err)
+      }finally{
+            console.log("finished try--catch")
+      }
+      return c;
+      //return (degree-32)/1.8; Correct code
 }
 function CelsiusToFahrenheit(degree)
 {
-      return degree*1.8 +32;
+      //return degree*1.8 +32; Correct code
+      throw "divided by zero";
 }
 document.getElementById("cValue").onchange = function()
 {
